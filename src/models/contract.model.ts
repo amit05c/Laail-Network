@@ -30,8 +30,6 @@ const constractSchema= new mongoose.Schema<Contract>({
     IsRepaid:{type: Boolean, required:true},
     
 
-
-    
 })
 
 const ContractModel= mongoose.model<Contract>('contract',constractSchema)

@@ -44,6 +44,9 @@ const getContract=async(req:Request,res:Response)=>{
             // let allUsers= await findAllContract({}).populate("LenderId")
             // res.send(allUsers)
             let allUsers= await findAllusers({count: {$gte: Number(n) }})
+            if(allUsers.length==0){
+                return res.send("No Lender in this range")
+            }
             res.send(allUsers)
 
         }else{
